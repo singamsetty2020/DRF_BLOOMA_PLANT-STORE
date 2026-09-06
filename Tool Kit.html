@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .navbar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 90px;
+
+    padding: 0 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    cursor: pointer;
+}
+
+.logo-icon {
+    font-size: 25px;
+
+    transition: transform 0.3s ease;
+}
+
+.logo-name {
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #111;
+
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.logo:hover .logo-name {
+    color: #d63c3c;
+
+    transform: translateY(-2px);
+}
+
+.logo:hover .logo-icon {
+    transform: translateY(-2px);
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+.nav-links a, .dropbtn {
+      position: relative;
+      text-decoration: none;
+      color: #111;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 6px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+    }
+    .nav-links > a:hover,
+.dropdown > .dropbtn:hover {
+    color: #d63c3c;
+    transform: translateY(-3px);
+    background: rgba(128, 128, 128, 0.12);
+}
+    
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: white;
+    min-width: 210px;
+
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+
+.dropdown-content a {
+    display: block;
+
+    color: #333;
+
+    padding: 12px 16px;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transform: none !important;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+
+    color: #d63c3c;
+
+    transform: none !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.Tool-Kit-Types{
+           width: 90%;
+    max-width: 1100px;
+    margin: 0 auto ;
+    text-align: center;
+    padding-top: 130px; 
+    box-sizing: border-box; 
+     }
+
+     .Tool-Kit-Types h2{
+        font-size: 25px;
+        font-family: 'Poppins', sans-serif;
+        color:#556B2F;
+        text-align: center;
+    } 
+    .Tool-Kit-Types p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #666666;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    margin: 10px 0 25px;
+
+    }
+
+    .Tool-Kit-section{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:30px;
+        max-width:1200px;
+        margin: 0 auto; 
+         margin-bottom: 80px;    
+        
+    }
+
+    .Tool-Kit-card {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 20px;
+    border: 1px solid #e1eadf;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s;
+    }
+
+
+.Tool-Kit-card:hover {
+    transform: translateY(-10px);
+    border-color: #9fbd9f;
+}
+
+
+.Tool-Kit-card h2 {
+    color: #315c3a;
+    font-size: 25px;
+    margin: 0 0 15px;
+}
+
+
+.kit-description {
+    color: #66736a;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 70px;
+    margin-bottom: 20px;
+}
+
+
+.Tool-Kit-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+}
+
+.Tool-Kit-card ul li {
+    color: #46564b;
+    font-size: 15px;
+    padding: 9px 0;
+    border-bottom: 1px solid #edf1eb;
+}
+
+.Tool-Kit-card ul li:last-child {
+    border-bottom: none;
+}
+
+.perfect {
+    margin-top: auto;
+    padding: 13px 15px;
+    background: #f0f6ed;
+    border-radius: 10px;
+    color: #52705a;
+    font-size: 14px;
+}
+
+.perfect strong {
+    color: #315c3a;
+}
+
+
+
+details {
+    margin-top: 15px;
+}
+
+summary {
+    cursor: pointer;
+    color: #315c3a;
+    font-weight: bold;
+    padding: 10px;
+    background: #f0f6ed;
+    border-radius: 8px;
+}
+
+details img {
+    width: 250px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2f6139;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #315c3a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #52705a;
+}
+body{
+    background-color: #F0F2E6;
+}
+
+/* =====================================
+   LAPTOP / SMALL LAPTOP
+   Below 1200px
+===================================== */
+
+@media screen and (max-width: 1200px) {
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .Tool-Kit-Types {
+        width: 90%;
+    }
+
+    .Tool-Kit-section {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .Tool-Kit-card {
+        padding: 25px 20px;
+    }
+
+    .Tool-Kit-card h2 {
+        font-size: 21px;
+    }
+
+    .kit-description {
+        font-size: 14px;
+    }
+
+    .Tool-Kit-card ul li {
+        font-size: 14px;
+    }
+
+    details img {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+
+/* =====================================
+   TABLET
+   Below 900px
+===================================== */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        padding: 0 20px;
+        height: 80px;
+    }
+
+    .logo-name {
+        font-size: 24px;
+    }
+
+    .logo-icon {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a,
+    .dropbtn {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .Tool-Kit-Types {
+        padding-top: 110px;
+        width: 90%;
+    }
+
+    .Tool-Kit-Types h2 {
+        font-size: 23px;
+    }
+
+    .Tool-Kit-Types p {
+        font-size: 15px;
+    }
+
+    /* 2 cards per row */
+    .Tool-Kit-section {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .Tool-Kit-card {
+        padding: 30px 25px;
+    }
+
+    .Tool-Kit-card h2 {
+        font-size: 22px;
+    }
+
+    details img {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+  
+
+    .navbar {
+        position: relative;
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        gap: 7px;
+    }
+
+    .logo-icon {
+        font-size: 22px;
+    }
+
+    .logo-name {
+        font-size: 23px;
+        letter-spacing: 2px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .nav-links a,
+    .dropbtn {
+        font-size: 13px;
+        padding: 6px 7px;
+    }
+
+
+
+    .dropdown-content {
+        min-width: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .dropdown-content a {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+
+
+    .Tool-Kit-Types {
+        width: 92%;
+        padding-top: 30px;
+    }
+
+    .Tool-Kit-Types h2 {
+        font-size: 21px;
+    }
+
+    .Tool-Kit-Types p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    .Tool-Kit-section {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .Tool-Kit-card {
+        padding: 25px 20px;
+    }
+
+    .Tool-Kit-card h2 {
+        font-size: 21px;
+    }
+
+    .kit-description {
+        font-size: 14px;
+        min-height: auto;
+        line-height: 1.6;
+    }
+
+    .Tool-Kit-card ul li {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .perfect {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+
+
+    details img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    summary {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+
+
+
+    .btn {
+        margin-top: 20px;
+        padding: 11px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 400px) {
+
+    .navbar {
+        padding: 12px 8px;
+    }
+
+    .logo-name {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        gap: 2px;
+    }
+
+    .nav-links a,
+    .dropbtn {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .Tool-Kit-Types h2 {
+        font-size: 19px;
+    }
+
+    .Tool-Kit-Types p {
+        font-size: 13px;
+    }
+
+    .Tool-Kit-section {
+        width: 92%;
+    }
+
+    .Tool-Kit-card {
+        padding: 20px 15px;
+    }
+
+    .Tool-Kit-card h2 {
+        font-size: 19px;
+    }
+
+}
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+    padding: 40px 6%;
+    background-color: #256445;
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo-footer {
+    margin-right: 20px;
+}
+
+.logo-footer .logo-icon {
+    font-size: 25px;
+}
+
+.logo-footer .logo-name {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.logo-footer h4 {
+    margin-top: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.quickaccess {
+    display: flex;
+    flex-direction: column;
+}
+
+.quickaccess h3 {
+    margin-bottom: 10px;
+    font-style: oblique;
+}
+
+.quickaccess a {
+    text-decoration: none;
+    padding: 3px;
+    color: #FFFFFF;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media h3 {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.social-media a {
+    text-decoration: none;
+    padding: 3px;
+    color: #FFFFFF;
+}
+
+.quickaccess a:hover,
+.social-media a:hover {
+    color: #d63c3c;
+}
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">🌿</span>
+            <span class="logo-name">BLOOMA</span>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="Home.html">Home</a>
+
+            <a href="About.html">About Us</a>
+
+        
+        <div class="dropdown">
+
+            <a href="Products.html" class="dropbtn">Products</a>
+
+            <div class="dropdown-content">
+
+                <a href="SunnySpaces.html">Sunny Spaces</a>
+
+                <a href="LowLight.html">Low-Light Homes</a>
+
+                <a href="Succulents.html">Succulent Plants</a>
+
+
+            </div>
+            </div>
+        
+           
+            <a href="Tool Kit.html">Tool Kit</a>
+            
+            <a href="Plantcare.html">Plant Care</a>
+
+            <a href="Contact.html">Contact Us</a>
+
+        </nav>
+
+    </header>
+
+    <section class = "Tool-Kit-Types">
+    <h2> Types of Gardening Kits</h2>
+
+    <p style ="text-align: center;">🌱 Grow with Blooma! Discover our Beginner, Desk Garden,
+         and Indoor Garden Kits, thoughtfully created to bring more green, joy, and life into every space.</p>
+     </section>
+
+     <section class = "Tool-Kit-Container">
+
+    <div class = "Tool-Kit-section">
+      <div class = "Tool-Kit-card">
+         <h2>🌱 Beginner Kit</h2>
+                <p class="kit-description">
+                 A simple starter kit with everything you need to begin your plant-parent journey.
+                </p> 
+                    <ul>
+                        <li>✓ Mini Pot</li>
+                        <li>✓ soil </li>
+                        <li>✓ Gloves </li>
+                        <li>✓ Watering Bottle </li>
+                        <li>✓ Mini Trowel </li>
+                    </ul>
+
+                    <p class="perfect">
+                        <strong>Perfect for:</strong> Beginners
+                    </p>
+                    <p>Price: ₹599</p>
+                    <details>
+                        <summary>Explore More</summary>
+                        <img src = "./product images/Begineer Kit.jpg">
+                    </details>
+                    <button type="button" class="btn">Order Now</button>
+
+    </div>
+
+      <div class = "Tool-Kit-card">
+         <h2>🌱 Desk Garden-Kit</h2>
+                <p class="kit-description">
+                A compact garden kit designed to bring a fresh touch of greenery to your desk or workspace.
+                </p> 
+                    <ul>
+                        <li>✓ Mini Plant</li> 
+                        <li>✓ Decorative Pot</li>
+                        <li>✓ Soil Mix</li>
+                        <li>✓ Decorative Pebbles</li>
+                        <li>✓ Mini Watering Bottle</li> 
+                        </ul>
+
+                    <p class="perfect">
+                         <strong>Perfect for:</strong> Desks & Small Spaces </p>
+                    <p>Price: ₹799</p>
+                    <details>
+                        <summary>Explore More</summary>
+                        <img src = "./product images/Deskgarden kit.jpg">
+                    </details>
+                    <button type="button" class="btn">Order Now</button>
+    </div>
+    
+      <div class = "Tool-Kit-card">
+         <h2>🌱 Indoor-Garden-Kit</h2>
+                <p class="kit-description">
+                 A complete indoor gardening kit with everything you need to create your own beautiful green space at home.
+                </p> 
+                   <ul>
+                     <li>✓ 3 Indoor Plants</li>
+                     <li>✓ 3 Decorative Pots</li>
+                     <li>✓ Soil Mix</li>
+                     <li>✓ Gardening Gloves</li>
+                     <li>✓ Mini Trowel</li>
+                     <li>✓ Watering Bottle</li>
+                     <li>✓ Decorative Pebbles</li>
+                     </ul>
+
+                 <p class="perfect">
+                     <strong>Perfect for:</strong> Indoor Garden Lovers </p>
+                      <p>Price: ₹1,299</p>
+
+                      <details>
+                        <summary>Explore More</summary>
+                        <img src = "./product images/Indoor garden kit 2.jpg">
+                    </details>
+                    <button type="button" class="btn">Order Now</button>
+                    
+    </div>
+    </div>
+
+    <footer>
+    <div class="logo-footer">
+        <span class="logo-icon">🌿</span>
+        <span class="logo-name">BLOOMA</span>
+        <h4>
+            Bring nature closer.<br>
+            Let life bloom.
+        </h4>
+    </div>
+
+    <div class="quickaccess">
+        <h3>Quick Access</h3>
+        <a href="Home.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="Plantcare.html">Plant Care</a>
+        <a href="Products.html">Products</a>
+        <a href="Tool kit.html">Tool Kits</a>
+    </div>
+
+    <div class="social-media">
+        <h3>Follow Us</h3>
+        <a href="https://facebook.com/">Facebook</a>
+        <a href="https://web.whatsapp.com/">WhatsApp</a>
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.youtube.com/">YouTube</a>
+    </div>
+
+</footer>
+    
+    </section>
+</body>
+</html>

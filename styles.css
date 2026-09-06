@@ -1,0 +1,273 @@
+*{
+    margin: 0px;
+    overflow-x: hidden;
+}
+.navbar {
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 90px;
+
+    padding: 0 55px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 10;
+
+    background: transparent;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    cursor: pointer;
+}
+
+.logo-icon {
+    font-size: 25px;
+
+    transition: transform 0.3s ease;
+}
+
+.logo-name {
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #111;
+
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.logo:hover .logo-name {
+    color: #d63c3c;
+
+    transform: translateY(-2px);
+}
+
+.logo:hover .logo-icon {
+    transform: translateY(-2px);
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+}
+
+.nav-links a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 18px;
+
+    font-weight: 500;
+    padding: 9px 13px;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #d63c3c;
+    transform: translateY(-3px);
+    background: rgba(128, 128, 128, 0.12);
+    padding: 9px 13px;
+    border-radius: 6px;
+}
+.main-pageimage{
+    background-image: url(./media/main-page1.png);
+    height: 500px;
+    background-position: bottom;
+    background-size: 100%;
+}
+.mainimage-text{
+    padding-top: 100px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    margin-left: 35px;
+    h2{
+        color:white;
+    }
+    h4{
+        color:darkgreen
+    }
+    button{
+        padding:20px;
+        border-radius: 25px;
+        width: 150px;
+        background-color:#1F4D36;
+        color: #FFFFFF;
+        border: none;
+        font-weight: 900;
+    }
+}
+i{
+    font-size: xx-large;
+    display: inline;
+}
+.section2{
+    display: flex;
+    padding :80px;
+    justify-content: space-evenly;
+    div{
+        height: 200px;
+        width: 250px;
+    }
+    h2{
+        display: inline;
+    }
+}
+.section3{
+    display: flex;
+    justify-content: space-around;
+    div>img{
+        height: 500px;
+        width:350px;
+        border-radius: 10px;
+    }
+    div>form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+.feedback-form{
+    input{
+        height: 30px;
+        width: 350px;
+        border-radius: 10px;
+        outline-offset: none;
+        box-shadow: none;
+        border: 2px solid lightgray;
+    }
+    button{
+        height: 50px;
+        width: 200px;
+        border-radius: 25px;
+        background-color:#1F4D36;
+        color: #FFFFFF;
+        border: none;
+        font-weight: 900;
+        margin-left: 80px;
+    }
+}
+.f-dropdown{
+    height: 30px;
+    font-size: medium;
+    border: 2px solid lightgray;
+}
+.plt-choose{
+    background-image: url(./media/download4.png);
+    position: relative;
+    height: 400px;
+    width:1000px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 100px;
+    button{
+        margin-left: 1000px;
+        margin-top: 200px;
+        height: 50px;
+        width: 200px;
+        border-radius: 25px;
+        background-color:#1F4D36;
+        color: #FFFFFF;
+        border: none;
+        font-weight: 900;
+    }
+}
+.logo>img{
+    height: 50px;
+}
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+    padding: 40px 6%;
+    background-color: #256445;
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo-footer {
+    margin-right: 20px;
+}
+
+.logo-footer .logo-icon {
+    font-size: 25px;
+}
+
+.logo-footer .logo-name {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.logo-footer h4 {
+    margin-top: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.quickaccess {
+    display: flex;
+    flex-direction: column;
+}
+
+.quickaccess h3 {
+    margin-bottom: 10px;
+    font-style: oblique;
+}
+
+.quickaccess a {
+    text-decoration: none;
+    padding: 3px;
+    color: #FFFFFF;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media h3 {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.social-media a {
+    text-decoration: none;
+    padding: 3px;
+    color: #FFFFFF;
+}
+
+.quickaccess a:hover,
+.social-media a:hover {
+    color: #d63c3c;
+}
+.end{
+    
+    img{
+        height: 300px;
+    }
+}
