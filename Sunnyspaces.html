@@ -225,9 +225,6 @@
     color: white;
 }
 
-/*  Media quries */
-
-
 @media screen and (max-width: 1024px) {
 
     .navbar {
@@ -427,6 +424,7 @@
 
 footer {
     display: flex;
+    position: relative;
     justify-content: space-evenly;
     align-items: center;
     height: 300px;
@@ -493,6 +491,17 @@ footer {
 .social-media a:hover {
     color: #d63c3c;
 }
+
+.copyright {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
     </style>
 </head>
 <body>
@@ -621,14 +630,14 @@ footer {
         </h4>
     </div>
 
-    <div class="quickaccess">
+   <div class="quickaccess">
         <h3>Quick Access</h3>
         <a href="Home.html">Home</a>
         <a href="About.html">About Us</a>
-        <a href="Contact.html">Contact Us</a>
-        <a href="Plantcare.html">Plant Care</a>
         <a href="Products.html">Products</a>
         <a href="Tool Kit.html">Tool Kits</a>
+        <a href="Plantcare.html">PlantCare</a>
+        <a href="Contact.html">Contact Us</a>
     </div>
 
     <div class="social-media">
@@ -637,6 +646,10 @@ footer {
         <a href="https://web.whatsapp.com/">WhatsApp</a>
         <a href="https://www.instagram.com/">Instagram</a>
         <a href="https://www.youtube.com/">YouTube</a>
+    </div>
+
+    <div class="copyright">
+    © BLOOMA PLANT STORE 2026 💠All rights reserved 💠
     </div>
 
 </footer>

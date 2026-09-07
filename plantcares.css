@@ -102,14 +102,11 @@
 }
 
 .navbar {
-    top: 0;
-    left: 0;
-
     width: 100%;
 
     height: 400px;
 
-    padding: 0 55px;
+    padding: 0 50px;
 
     display: flex;
     flex-direction: column;
@@ -127,7 +124,7 @@
 
 .logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding-right: 50px;
     gap: 9px;
@@ -196,44 +193,557 @@
     padding: 9px 13px;
     border-radius: 6px;
 }
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+}
+
 
 @media (max-width: 600px) {
 
-    .plant-care {
-        width: 94%;
-        margin: 40px auto;
+    .navbar {
+        width: 100%;
+        height: 500px;
+        padding: 20px;
+        box-sizing: border-box;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        overflow: visible;
+    }
+
+    .navbar > div:first-child {
+        width: 100%;
+
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: flex-start;
+
+        box-sizing: border-box;
+        overflow: visible;
+    }
+
+    .logo {
+        padding-right: 0;
+        margin: 0;
+        flex-shrink: 0;
+        overflow: visible;
+    }
+
+    .logo-icon {
+        font-size: 22px;
+    }
+
+    .logo-name {
+        font-size: 23px;
+        letter-spacing: 2px;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+
+        font-size: 30px;
+        color: #111;
+
+        cursor: pointer;
+        z-index: 101;
+
+        overflow: visible;
+    }
+
+    .nav-links {
+        position: fixed;
+
+        top: 0;
+        right: -260px;
+
+        width: 240px;
+        height: 100vh;
+
+        padding: 90px 20px 20px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 8px;
+
+        background-color: #f6f2e9;
+
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+
+        transition: right 0.3s ease;
+
+        z-index: 100;
+
+        visibility: hidden;
+        pointer-events: none;
+
+        overflow: visible;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        right: 0;
+
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 12px 15px;
+
+        font-size: 16px;
+
+        box-sizing: border-box;
+
+        overflow: visible;
+    }
+
+    .nav-links a:hover {
+        transform: none;
+    }
+
+
+    .navbar > div.care-heading {
+        width: 100%;
+
+        display: block !important;
+
+        margin-top: 70px;
+        margin-bottom: 0;
+
+        padding: 0 10px;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+        overflow: visible;
+    }
+
+    .care-heading p {
+        font-size: 12px;
+        letter-spacing: 2px;
+        overflow: visible;
     }
 
     .care-heading h1 {
         font-size: 28px;
+        line-height: 1.25;
+        margin: 10px 0;
+        overflow: visible;
     }
 
     .care-heading span {
+        display: block;
         font-size: 14px;
+        line-height: 1.5;
+        overflow: visible;
+    }
+
+
+    .plant-care {
+        width: 94%;
+        margin: 40px auto;
+        overflow: visible;
+    }
+
+    .care-list {
+        overflow: visible;
+    }
+
+    .care-list details {
+        margin-bottom: 10px;
+        overflow: visible;
     }
 
     .care-list summary {
         padding: 16px;
         font-size: 16px;
+        overflow: visible;
     }
 
     .care-content {
         padding: 16px;
+        overflow: visible;
     }
 
     .care-content h2 {
         font-size: 22px;
+        line-height: 1.3;
+        overflow: visible;
+    }
+
+    .care-content > p {
+        font-size: 14px;
+        line-height: 1.6;
+        overflow: visible;
     }
 
     .care-card {
         padding: 15px;
+        overflow: visible;
+    }
+
+    .care-card h3,
+    .care-card p,
+    .care-card strong {
+        overflow: visible;
+    }
+
+
+    footer {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: 30px;
+
+        padding: 40px 20px;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+        overflow: visible;
+    }
+
+    footer > div {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        overflow: visible;
+    }
+
+    footer .logo-footer {
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+    }
+
+    footer .quickaccess {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: 10px;
+
+        overflow: visible;
+    }
+
+    footer .social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        overflow: visible;
+    }
+
+    footer h3,
+    footer h4,
+    footer a,
+    footer span {
+        overflow: visible;
+    }
+
+    footer h3 {
+        margin-bottom: 8px;
+    }
+
+    footer a {
+        padding: 4px;
+        line-height: 1.4;
     }
 }
-footer {
+
+
+@media (max-width: 480px) {
+
+    .navbar {
+        height: 470px;
+        padding: 15px;
+    }
+
+    .logo-icon {
+        font-size: 20px;
+    }
+
+    .logo-name {
+        font-size: 21px;
+        letter-spacing: 2px;
+    }
+
+    .menu-btn {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        width: 220px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+        padding: 11px 12px;
+    }
+
+
+    .navbar > div.care-heading {
+        margin-top: 60px;
+        padding: 0 5px;
+    }
+
+    .care-heading p {
+        font-size: 11px;
+    }
+
+    .care-heading h1 {
+        font-size: 25px;
+        line-height: 1.2;
+    }
+
+    .care-heading span {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    .plant-care {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .care-list summary {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .care-content {
+        padding: 14px;
+    }
+
+    .care-content h2 {
+        font-size: 20px;
+    }
+
+    .care-content > p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .care-card {
+        padding: 13px;
+    }
+
+    .care-card h3 {
+        font-size: 16px;
+    }
+
+    .care-card p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    footer {
+        width: 100%;
+        height: auto;
+
+        padding: 35px 15px;
+
+        gap: 30px;
+
+        box-sizing: border-box;
+    }
+
+    footer .logo-footer {
+        margin-bottom: 5px;
+    }
+
+    footer h3 {
+        font-size: 18px;
+    }
+
+    footer a {
+        font-size: 14px;
+        padding: 4px;
+    }
+}
+footer{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 300px;
+    background-color: #1F4D36;
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    .quickaccess{
+        display: flex;
+        flex-direction: column;
+        a{
+            text-decoration: none;
+            padding: 3px;
+            color: #FFFFFF
+        }
+    }
+    .social-media{
+        display: flex;
+        flex-direction: column;
+        a{
+            text-decoration: none;
+            padding: 3px;
+            color: #FFFFFF;
+        }
+    }
+}
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    main {
+        overflow: visible !important;
+    }
+
+    footer {
+        width: 100%;
+        height: auto !important;
+        min-height: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+
+        padding: 40px 20px !important;
+
+        box-sizing: border-box;
+
+        overflow: visible !important;
+    }
+
+    footer > div {
+        width: 100%;
+        height: auto !important;
+        max-height: none !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        overflow: visible !important;
+    }
+
+    footer .logo-footer {
+        margin-right: 0 !important;
+        margin-bottom: 30px !important;
+
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    footer .quickaccess {
+        height: auto !important;
+        max-height: none !important;
+
+        margin-bottom: 30px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        overflow: visible !important;
+    }
+
+    footer .social-media {
+        height: auto !important;
+        max-height: none !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        overflow: visible !important;
+    }
+
+    footer h3,
+    footer h4,
+    footer a,
+    footer span {
+        overflow: visible !important;
+    }
+
+    footer a {
+        padding: 4px 0 !important;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    footer {
+        width: 100%;
+        height: auto !important;
+
+        padding: 35px 15px !important;
+    }
+
+    footer > div {
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    footer .logo-footer {
+        margin-bottom: 25px !important;
+    }
+
+    footer .quickaccess {
+        margin-bottom: 25px !important;
+    }
+
+    footer h3 {
+        font-size: 18px;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height:auto;
+    min-height: auto;
     padding: 40px 6%;
     background-color: #256445;
     color: #FFFFFF;
@@ -296,4 +806,59 @@ footer {
 .quickaccess a:hover,
 .social-media a:hover {
     color: #d63c3c;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 30px;
+    color: #111;
+    cursor: pointer;
+    z-index: 20;
+}
+
+@media (max-width: 700px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 200px;
+        height: 100vh;
+        background: #e0f0d7;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 100px 25px 30px;
+        gap: 8px;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.12);
+        transition: right 0.35s ease;
+        z-index: 15;
+    }
+    #menu-toggle:checked ~ .nav-links {
+        right: 0;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 17px;
+    }
+
 }

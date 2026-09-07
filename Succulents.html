@@ -211,8 +211,6 @@
     color: white;
 }
 
-/*  Media quries */
-
 @media screen and (max-width: 1024px) {
 
     .navbar {
@@ -410,6 +408,7 @@
 
 footer {
     display: flex;
+    position: relative;
     justify-content: space-evenly;
     align-items: center;
     height: 300px;
@@ -417,6 +416,16 @@ footer {
     background-color: #256445;
     color: #FFFFFF;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
 }
 
 .logo-footer {
@@ -493,7 +502,6 @@ footer {
 
             <a href="About.html">About Us</a>
 
-            <!-- Products Dropdown -->
         <div class="dropdown">
 
             <a href="Products.html" class="dropbtn">Products</a>
@@ -602,18 +610,22 @@ footer {
         <h3>Quick Access</h3>
         <a href="Home.html">Home</a>
         <a href="About.html">About Us</a>
-        <a href="Contact.html">Contact Us</a>
-        <a href="Plantcare.html">Plant Care</a>
         <a href="Products.html">Products</a>
         <a href="Tool Kit.html">Tool Kits</a>
+        <a href="Plantcare.html">PlantCare</a>
+        <a href="Contact.html">Contact Us</a>
     </div>
-
+    
     <div class="social-media">
         <h3>Follow Us</h3>
         <a href="https://facebook.com/">Facebook</a>
         <a href="https://web.whatsapp.com/">WhatsApp</a>
         <a href="https://www.instagram.com/">Instagram</a>
         <a href="https://www.youtube.com/">YouTube</a>
+    </div>
+
+    <div class="copyright">
+    © BLOOMA PLANT STORE 2026 💠All rights reserved 💠
     </div>
 
 </footer>
